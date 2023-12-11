@@ -380,26 +380,26 @@ let emails = {
 let other = []
 
 
-for (let user of users) {
-    let m = user.email.split('.')[-1];
+// for (let user of users) {
+//     let m = user.email.split('.')[-1];
 
-    switch (m) {
-        case 'org':
-            emails.org.push(users);
-            break;
-        case 'net':
-            emails.net.push(users);
-            break;
-        case 'info':
-            emails.info.push(users);
-            break;
-        default:
-            emails.other.push(user);
-            break;
-    }
-}
+//     switch (m) {
+//         case 'org':
+//             emails.org.push(users);
+//             break;
+//         case 'net':
+//             emails.net.push(users);
+//             break;
+//         case 'info':
+//             emails.info.push(users);
+//             break;
+//         default:
+//             emails.other.push(user);
+//             break;
+//     }
+// }
 
-console.log('Email with org: ', org);
-console.log('Email with net: ', net);
-console.log('Email with info: ', info);
-console.log('other emails: ', other);
+// console.log('Email with org: ', org);
+// console.log('Email with net: ', net);
+// console.log('Email with info: ', info);
+// console.log('other emails: ', other);
