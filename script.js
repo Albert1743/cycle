@@ -652,19 +652,21 @@ let categories = [
 ]
 
 for (let product of products) {
-
+    let count = product
     for (let category of categories) {
         if (product.type === category.name) {
             category.amount++
             category.arr.push(product.name)
+            category.total += count.price
         }
     }
 
-    products.forEach(product => {
-        let category = categories.find(t => t.name === product.type);
-        if (category) {
-            category.total += product.price;
-        }
-    });
+
+    // products.forEach(product => {
+    //     let category = categories.find(t => t.name === product.type);
+    //     if (category) {
+    //         category.total += product.price;
+    //     }
+    // });
 }
 console.log(categories);
