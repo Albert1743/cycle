@@ -456,148 +456,215 @@
 
 
 
-
 //            HOMEWORK
-let arr = [
-    {
-        id: Math.random(),
-        name: 'Timur',
-        info: {
-            school: '235',
-            faculity: 'SMM'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Imran',
-        info: {
-            school: 'ne izvestno',
-            faculity: 'programming'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Aminjon',
-        info: {
-            school: '444',
-            faculity: 'Dizayn'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Maxmud',
-        info: {
-            school: '777',
-            faculity: '3dsmax'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Muxammad',
-        info: {
-            school: '5555',
-            faculity: 'Backend'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Timur',
-        info: {
-            school: '235',
-            faculity: 'SMM'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Imran',
-        info: {
-            school: 'ne izvestno',
-            faculity: 'programming'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Aminjon',
-        info: {
-            school: '444',
-            faculity: 'Dizayn'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Maxmud',
-        info: {
-            school: '777',
-            faculity: '3dsmax'
-        },
-    },
+// let arr = [
+//     {
+//         id: Math.random(),
+//         name: 'Timur',
+//         info: {
+//             school: '235',
+//             faculity: 'SMM'
+//         },
+//     },
+//     {
+//         id: Math.random(),
+//         name: 'Imran',
+//         info: {
+//             school: 'ne izvestno',
+//             faculity: 'programming'
+//         },
+//     },
+//     {
+//         id: Math.random(),
+//         name: 'Aminjon',
+//         info: {
+//             school: '444',
+//             faculity: 'Dizayn'
+//         },
+//     },
+//     {
+//         id: Math.random(),
+//         name: 'Maxmud',
+//         info: {
+//             school: '777',
+//             faculity: '3dsmax'
+//         },
+//     },
+//     {
+//         id: Math.random(),
+//         name: 'Muxammad',
+//         info: {
+//             school: '5555',
+//             faculity: 'Backend'
+//         },
+//     },
+//     {
+//         id: Math.random(),
+//         name: 'Timur',
+//         info: {
+//             school: '235',
+//             faculity: 'SMM'
+//         },
+//     },
+//     {
+//         id: Math.random(),
+//         name: 'Imran',
+//         info: {
+//             school: 'ne izvestno',
+//             faculity: 'programming'
+//         },
+//     },
+//     {
+//         id: Math.random(),
+//         name: 'Aminjon',
+//         info: {
+//             school: '444',
+//             faculity: 'Dizayn'
+//         },
+//     },
+//     {
+//         id: Math.random(),
+//         name: 'Maxmud',
+//         info: {
+//             school: '777',
+//             faculity: '3dsmax'
+//         },
+//     },
 
+//     {
+//         id: Math.random(),
+//         name: 'Maxmud',
+//         info: {
+//             school: '777',
+//             faculity: '3dsmax'
+//         },
+//     },
+//     {
+//         id: Math.random(),
+//         name: 'Muxammad',
+//         info: {
+//             school: '5555',
+//             faculity: 'Backend'
+//         },
+//     },
+// ]
+
+// let categories = [
+//     {
+//         course: ' SMM',
+//         count: 0
+//     },
+//     {
+//         course: 'PROGRAMMING',
+//         count: 0
+//     },
+//     {
+//         course: '     3DSMAX',
+//         count: 0
+//     },
+//     {
+//         course: ' DIZAYN',
+//         count: 0
+//     },
+//     {
+//         course: '   BACKEND',
+//         count: 0
+//     },
+// ]
+
+
+// for (let student of arr) {
+//     let fac = student.info.faculity.toUpperCase().trim()
+
+//     for(let course of categories) {
+//         let course_name = course.course.toUpperCase().trim()
+//         if (fac === course_name) {
+//             course.count++
+//             course.arr.push(student.name)
+
+//         }
+//     }
+// }
+
+// console.table(categories)
+
+
+
+
+
+let products = [
     {
-        id: Math.random(),
-        name: 'Maxmud',
-        info: {
-            school: '777',
-            faculity: '3dsmax'
-        },
+        name: "tvorog",
+        type: "milk",
+        price: 10000
     },
     {
-        id: Math.random(),
-        name: 'Muxammad',
-        info: {
-            school: '5555',
-            faculity: 'Backend'
-        },
+        name: "apple",
+        type: "fruit",
+        price: 5000
+    },
+    {
+        name: "govyadina",
+        type: "meat",
+        price: 100000
+    },
+    {
+        name: "yogurt",
+        type: "milk",
+        price: 8000
+    },
+    {
+        name: "banan",
+        type: "fruit",
+        price: 20000
+    },
+    {
+        name: "kuryatina",
+        type: "meat",
+        price: 45000
+    },
+    {
+        name: "sir",
+        type: "milk",
+        price: 16000
     },
 ]
 
 let categories = [
     {
-        course: ' SMM',
-        count: 0
+        name: "meat",
+        arr: [],
+        amount: 0,
+        total: 0
     },
     {
-        course: 'PROGRAMMING',
-        count: 0
+        name: "milk",
+        arr: [],
+        amount: 0,
+        total: 0
     },
     {
-        course: '     3DSMAX',
-        count: 0
-    },
-    {
-        course: ' DIZAYN',
-        count: 0
-    },
-    {
-        course: '   BACKEND',
-        count: 0
+        name: "fruit",
+        arr: [],
+        amount: 0,
+        total: 0
     },
 ]
 
-// for (let i = 0; i < arr.length; i++) {
+for (let product of products) {
 
-//     switch (arr[i].faculity) {
-//         case " SMM":
-//             count++
-//             break;
-//         case "PROGRAMMING":
-//             count++
-//             break;
-//         case "     3DSMAX":
-//             count++
-//             break;
-
-//         default:
-//             break;
-//     }
-// }
-
-
-arr.forEach(person => {
-    let category = person.info.faculity.toUpperCase().trim()
-
-    if (categoryObject) {
-        categoryObject.count++;
+    for (let category of categories) {
+        if (product.type === category.name) {
+            category.amount++
+            category.arr.push(product.name)
+        }
     }
-});
 
+    products.forEach(product => {
+        let category = categories.find(t => t.name === product.type);
+        if (category) {
+            category.total += product.price;
+        }
+    });
+}
 console.log(categories);
