@@ -592,81 +592,191 @@
 
 
 
-let products = [
+// let products = [
+//     {
+//         name: "tvorog",
+//         type: "milk",
+//         price: 10000
+//     },
+//     {
+//         name: "apple",
+//         type: "fruit",
+//         price: 5000
+//     },
+//     {
+//         name: "govyadina",
+//         type: "meat",
+//         price: 100000
+//     },
+//     {
+//         name: "yogurt",
+//         type: "milk",
+//         price: 8000
+//     },
+//     {
+//         name: "banan",
+//         type: "fruit",
+//         price: 20000
+//     },
+//     {
+//         name: "kuryatina",
+//         type: "meat",
+//         price: 45000
+//     },
+//     {
+//         name: "sir",
+//         type: "milk",
+//         price: 16000
+//     },
+// ]
+
+// let categories = [
+//     {
+//         name: "meat",
+//         arr: [],
+//         amount: 0,
+//         total: 0
+//     },
+//     {
+//         name: "milk",
+//         arr: [],
+//         amount: 0,
+//         total: 0
+//     },
+//     {
+//         name: "fruit",
+//         arr: [],
+//         amount: 0,
+//         total: 0
+//     },
+// ]
+
+// let expensive = { price: 0 }
+// let cheap = products[0]
+
+// for (let product of products) {
+
+//     if (product.price > expensive.price) {
+//         expensive = product
+//     }
+
+//     if(product.price < cheap.price){
+//         cheap = product
+//     }
+// }
+
+// console.log(expensive);
+// console.log(cheap);
+
+
+// for (let product of products) {
+//     let count = product
+//     for (let category of categories) {
+//         if (product.type === category.name) {
+//             category.amount++
+//             category.arr.push(product.name)
+//             category.total += count.price
+//         }
+//     }
+// }
+// console.table(categories);
+
+
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let max = 0
+// let min = numbers[0]
+
+// for (let number of numbers) {
+//     if (number > max) {
+//         max = number
+//     }
+//     if (number < min) {
+//         min = number
+//     }
+// }
+
+// console.log(max);
+// console.log(min);
+
+
+
+let students = [
     {
-        name: "tvorog",
-        type: "milk",
-        price: 10000
+        name: "Albert",
+        age: "2008-07-28",
+        gender: 'm'
     },
     {
-        name: "apple",
-        type: "fruit",
-        price: 5000
+        name: "Shakha",
+        age: "2012-10-13",
+        gender: 'm'
     },
     {
-        name: "govyadina",
-        type: "meat",
-        price: 100000
+        name: "Amal",
+        age: "2008-06-24",
+        gender: 'w'
     },
     {
-        name: "yogurt",
-        type: "milk",
-        price: 8000
+        name: "Umar",
+        age: "2007-04-28",
+        gender: 'w'
     },
     {
-        name: "banan",
-        type: "fruit",
-        price: 20000
+        name: "Aziz",
+        age: "2006-09-03",
+        gender: 'm'
     },
     {
-        name: "kuryatina",
-        type: "meat",
-        price: 45000
+        name: "Daler",
+        age: "2007-11-27",
+        gender: 'w'
     },
     {
-        name: "sir",
-        type: "milk",
-        price: 16000
+        name: "Alibek",
+        age: "2006-04-12",
+        gender: 'm'
+    },
+    {
+        name: "Bexruz",
+        age: "2009-11-27",
+        gender: 'w'
+    },
+    {
+        name: "Alfredo",
+        age: "2011-04-12",
+        gender: 'm'
     },
 ]
 
-let categories = [
-    {
-        name: "meat",
-        arr: [],
-        amount: 0,
-        total: 0
-    },
-    {
-        name: "milk",
-        arr: [],
-        amount: 0,
-        total: 0
-    },
-    {
-        name: "fruit",
-        arr: [],
-        amount: 0,
-        total: 0
-    },
-]
+let lg_name = ''
+let sh_name = students[0].name
 
-for (let product of products) {
-    let count = product
-    for (let category of categories) {
-        if (product.type === category.name) {
-            category.amount++
-            category.arr.push(product.name)
-            category.total += count.price
-        }
+for (let name of students) {
+    if (name.name.length > lg_name.length) {
+        lg_name = name.name
     }
-
-
-    // products.forEach(product => {
-    //     let category = categories.find(t => t.name === product.type);
-    //     if (category) {
-    //         category.total += product.price;
-    //     }
-    // });
 }
-console.log(categories);
+
+for (let student of students) {
+    if (student.name.length < sh_name.length) {
+        sh_name = student.name
+    }
+}
+
+console.log('The longest name is:', lg_name);
+console.log('The short name is:', sh_name);
+
+
+let oldStudent = students[0]
+
+for (let i = 0; i < students.length; i++) {
+    let currAge = new Date(students[i].age);
+    let oldAge = new Date(oldStudent.age);
+
+    if (currAge > oldAge) {
+        oldStudent = students[i];
+    }
+}
+
+console.log('The oldest student is:', oldStudent);
